@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<title>Plan-week</title>
+</head>
+
+<body  data-mode="plan"> <!-- або report -->
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<section class="page__plan-week page">
+				<div class="page__container">
+					<h2 class="page__title">Create week plan</h2>
+					<p class="page__text">Drag and drop Excel files here or click the button</p>
+
+					<!-- Drop zone -->
+					<div class="page__dropzone" id="dropZone">
+						Drop: <strong>sales.xlsx</strong>
+					</div>
+
+					<!-- Buttons -->
+					<div class="page__footer">
+						<input type="file" id="fileInput" multiple hidden />
+						<button class="page__button" id="selectBtn">Select files</button>
+						<button class="page__button" id="generateBtn" style="display: none;">Generate Report</button>
+					</div>
+
+					<div class="page__button">
+						<a href="/index.html">← Back to Home</a>
+					</div>
+
+					<div class="modal" id="modalMessage" style="display:none">
+						<div class="modal__content">
+							<p id="modalMessageText"></p>
+							<button class="page__button" id="modalOkBtn">OK</button>
+						</div>
+					</div>
+
+					<div class="modal" id="modalWeekPrompt" style="display:none">
+						<div class="modal__content">
+							<p>📅 Enter week number (e.g. 30):</p>
+							<input type="number" id="weekInput" placeholder="30" min="1" max="53"
+								style="margin: 10px 0; width: 100%; padding: 5px;" />
+							<div class="modal__actions">
+								<button class="page__button" id="confirmWeekBtn">OK</button>
+								<button class="page__button" id="cancelWeekBtn">Cancel</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+		</footer>
+	</div>
+	<!-- Підключення скриптів -->
+	<script src="/js/script.js"></script>
+</body>
+
+</html>

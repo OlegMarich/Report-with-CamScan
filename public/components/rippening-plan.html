@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<title>Rippening-plan</title>
+</head>
+
+<body data-mode="rippening"> <!-- data-mode="rippening" або report -->
+	<div class="wrapper">
+		<header class="header">
+		</header>
+		<main class="page">
+			<section class="page__rippening-week page">
+				<div class="page__container">
+					<div class="page__actions"></div>
+					<h1 class="page__title">Warehouse Chambers</h1>
+					<!-- Камери -->
+					<div class="page__chambers chambers">
+						<ul class="chambers__left-side">
+							<li class="page__chamber" data-num="1">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="2">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="3">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="4">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="5">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="6">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="7">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="8">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="9">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="10">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="11">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="12">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="13">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="14">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="29">
+								<div class="page__chamber-door"></div>
+
+							</li>
+						</ul>
+						<ul class="chambers__right-side">
+							<li class="page__chamber" data-num="15">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="16">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="17">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="18">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="19">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="20">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="21">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="22">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="23">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="24">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="25">
+								<div class="page__chamber-door"></div>
+								25
+							</li>
+							<li class="page__chamber" data-num="26">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="27">
+								<div class="page__chamber-door"></div>
+							</li>
+							<li class="page__chamber" data-num="28">
+								<div class="page__chamber-door"></div>
+
+							</li>
+							<li class="page__chamber" data-num="30">
+								<div class="page__chamber-door"></div>
+								30
+							</li>
+						</ul>
+					</div>
+					<!-- Вибір сторони LS/RS -->
+					<div class="chamber-modal" id="side-modal">
+						<div class="chamber-modal__content">
+							<h2 class="modal-title">Choose Side</h2>
+							<div class="side-buttons">
+								<button data-side="LS">LS</button>
+								<button data-side="RS">RS</button>
+							</div>
+							<button class="chamber-modal__close">Close</button>
+						</div>
+					</div>
+					<!-- Форма введення контейнера -->
+					<div class="chamber-modal" id="form-modal">
+						<div class="chamber-modal__content">
+							<h2 id="modal-title">Chamber</h2>
+							<form>
+								<label>
+									Контейнер:
+									<select id="containerSelect" required>
+										<option value="">--Оберіть контейнер--</option>
+									</select>
+								</label>
+								<label>
+									Кількість
+									<input id="quantity" readonly>
+								</label>
+								<label>
+									Бренд
+									<input id="brand" readonly>
+								</label>
+								<label>
+									Код плантації
+									<input id="plantationCode" readonly>
+								</label>
+								<label>
+									Країна
+									<input id="country" readonly>
+								</label>
+								<label>
+									Регіон
+									<input id="region" readonly>
+								</label>
+								<button type="submit">Зберегти</button>
+							</form>
+							<button class="chamber-modal__close">Закрити</button>
+						</div>
+					</div>
+					<div class="page__button">
+						<a href="/index.html">← Back to Home</a>
+					</div>
+				</div>
+
+			</section>
+		</main>
+		<footer class="footer">
+		</footer>
+	</div>
+	<!-- Підключення скриптів -->
+	<script src="/js/script.js"></script>
+</body>
+
+</html>
