@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const https = require('https');
 const {exec} = require('child_process');
 const cors = require('cors');
 const scanBox = require('./scan-to-counter');
@@ -181,7 +182,7 @@ app.get('/api/server-info', (req, res) => {
   res.json({
     ip: LOCAL_IP,
     port: PORT,
-    url: `http://${LOCAL_IP}:${PORT}/components/scanner.html`,
+    url: `https://${LOCAL_IP}:${PORT}/components/scanner.html`,
   });
 });
 
@@ -191,7 +192,11 @@ app.use(express.static(publicDir));
 app.use('/output', express.static(outputDir));
 
 /* ---------------- START SERVER ---------------- */
+const options = {
+  key: fs.readFileSync('./cert/key.pem'),
+  cert: fs.readFileSync('./cert/cert.pem'),
+};
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on http://${LOCAL_IP}:${PORT}`);
+https.createServer(options, app).listen(PORT, '0.0.0.0', () => {
+  console.log(`🔐 HTTPS server running on https://${LOCAL_IP}:${PORT}`);
 });

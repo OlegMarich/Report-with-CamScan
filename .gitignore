@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Local HTTPS certificates
+cert/
+
+# Temporary input/output
+input/
+output/
+temp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
